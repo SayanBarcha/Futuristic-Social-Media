@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css?family=Sora:700|Sora:400");
+
+:root {
+  --terminal-bg: rgba(136, 33, 108, 0.3);
+  --lightY: #fff093;
+  --darkY: #e5cf3d;
+  --darkYT: rgba(229, 207, 61, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Sora";
+  font-weight: 700;
+  color: var(--lightY);
+  filter: drop-shadow(0 0 1rem var(--darkY));
+  margin: 0;
+}
+
+p,
+button > span {
+  font-family: "Sora";
+  font-weight: 400;
+  color: var(--lightY);
+  filter: drop-shadow(0 0 1rem var(--darkY));
+}
+
+p {
+  line-height: 2;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #010104;
+  position: relative;
+  overflow: hidden;
+  font-family: "Raleway";
+  font-weight: 400;
+}
+
+.terminal {
+  position: relative;
+  height: 80%;
+  width: 90%;
+  border-radius: 2rem;
+  border: 0.5rem solid #ffb9ec;
+  box-shadow: 0 0 10rem #88216c, inset 0 0 5rem #88216c;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.terminal::before {
+  content: "";
+  position: absolute;
+  height: 120%;
+  width: 100%;
+  z-index: -10;
+  background: linear-gradient(
+    var(--terminal-bg) 0,
+    var(--terminal-bg) 2%,
+    transparent 2%,
+    transparent 4%,
+    var(--terminal-bg) 4%,
+    var(--terminal-bg) 6%,
+    transparent 6%,
+    transparent 8%,
+    var(--terminal-bg) 8%,
+    var(--terminal-bg) 10%,
+    transparent 10%,
+    transparent 12%,
+    var(--terminal-bg) 12%,
+    var(--terminal-bg) 14%,
+    transparent 14%,
+    transparent 16%,
+    var(--terminal-bg) 16%,
+    var(--terminal-bg) 18%,
+    transparent 18%,
+    transparent 20%,
+    var(--terminal-bg) 20%,
+    var(--terminal-bg) 22%,
+    transparent 22%,
+    transparent 24%,
+    var(--terminal-bg) 24%,
+    var(--terminal-bg) 26%,
+    transparent 26%,
+    transparent 28%,
+    var(--terminal-bg) 28%,
+    var(--terminal-bg) 30%,
+    transparent 30%,
+    transparent 32%,
+    var(--terminal-bg) 32%,
+    var(--terminal-bg) 34%,
+    transparent 34%,
+    transparent 36%,
+    var(--terminal-bg) 36%,
+    var(--terminal-bg) 38%,
+    transparent 38%,
+    transparent 40%,
+    var(--terminal-bg) 40%,
+    var(--terminal-bg) 42%,
+    transparent 42%,
+    transparent 44%,
+    var(--terminal-bg) 44%,
+    var(--terminal-bg) 46%,
+    transparent 46%,
+    transparent 48%,
+    var(--terminal-bg) 48%,
+    var(--terminal-bg) 50%,
+    transparent 50%,
+    transparent 52%,
+    var(--terminal-bg) 52%,
+    var(--terminal-bg) 54%,
+    transparent 54%,
+    transparent 56%,
+    var(--terminal-bg) 56%,
+    var(--terminal-bg) 58%,
+    transparent 58%,
+    transparent 60%,
+    var(--terminal-bg) 60%,
+    var(--terminal-bg) 62%,
+    transparent 62%,
+    transparent 64%,
+    var(--terminal-bg) 64%,
+    var(--terminal-bg) 66%,
+    transparent 66%,
+    transparent 68%,
+    var(--terminal-bg) 68%,
+    var(--terminal-bg) 70%,
+    transparent 70%,
+    transparent 72%,
+    var(--terminal-bg) 72%,
+    var(--terminal-bg) 74%,
+    transparent 74%,
+    transparent 76%,
+    var(--terminal-bg) 76%,
+    var(--terminal-bg) 78%,
+    transparent 78%,
+    transparent 80%,
+    var(--terminal-bg) 80%,
+    var(--terminal-bg) 82%,
+    transparent 82%,
+    transparent 84%,
+    var(--terminal-bg) 84%,
+    var(--terminal-bg) 86%,
+    transparent 86%,
+    transparent 88%,
+    var(--terminal-bg) 88%,
+    var(--terminal-bg) 90%,
+    transparent 90%,
+    transparent 92%,
+    var(--terminal-bg) 92%,
+    var(--terminal-bg) 94%,
+    transparent 94%,
+    transparent 96%,
+    var(--terminal-bg) 96%,
+    var(--terminal-bg) 98%,
+    transparent 98%,
+    transparent 100%,
+    var(--terminal-bg) 100%
+  );
+  animation: terminal infinite 1s linear;
+}
+
+.blur {
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  background-color: #d661b6;
+  filter: blur(10rem);
+  bottom: -20%;
+}
+
+@keyframes terminal {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -4%);
+  }
+}
+
+.btn {
+  padding: 1rem 4rem;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff093;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  font-family: "Sora";
+  font-weight: 400;
+  box-shadow: 0 0 2rem var(--darkY), inset 0 0 1.5rem var(--darkY);
+  border-radius: 1.4rem;
+  white-space: nowrap;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  border-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQ4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDQ0OCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yNS41MDUzIDE1LjE3NTZDMjguODY5MSA4LjMzNDEyIDM1LjgyOTcgNCA0My40NTMzIDRINDAzLjA4OEM0MTAuNDI4IDQgNDE3LjE3OCA4LjAyMDQ3IDQyMC42NzQgMTQuNDc0M0w0MzkuNzYgNDkuNzExNUM0NDQuNTg5IDU4LjYyNTMgNDQ0LjU4OSA2OS4zNzQ3IDQzOS43NiA3OC4yODg1TDQyMC42NzQgMTEzLjUyNkM0MTcuMTc4IDExOS45OCA0MTAuNDI4IDEyNCA0MDMuMDg4IDEyNEg0My40NTMzQzM1LjgyOTYgMTI0IDI4Ljg2OTEgMTE5LjY2NiAyNS41MDUzIDExMi44MjRMOC4wMDggNzcuMjM2NkMzLjkwMzk1IDY4Ljg4OTQgMy45MDM5NSA1OS4xMTA2IDguMDA4MDEgNTAuNzYzNEwyNS41MDUzIDE1LjE3NTZaIiBzdHJva2U9IiNGRkYwOTMiIHN0cm9rZS13aWR0aD0iOCIvPgo8L3N2Zz4K")
+    stretch;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  border: solid transparent;
+  border-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQ4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDQ0OCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yNS41MDUzIDE1LjE3NTZDMjguODY5MSA4LjMzNDEyIDM1LjgyOTcgNCA0My40NTMzIDRINDAzLjA4OEM0MTAuNDI4IDQgNDE3LjE3OCA4LjAyMDQ3IDQyMC42NzQgMTQuNDc0M0w0MzkuNzYgNDkuNzExNUM0NDQuNTg5IDU4LjYyNTMgNDQ0LjU4OSA2OS4zNzQ3IDQzOS43NiA3OC4yODg1TDQyMC42NzQgMTEzLjUyNkM0MTcuMTc4IDExOS45OCA0MTAuNDI4IDEyNCA0MDMuMDg4IDEyNEg0My40NTMzQzM1LjgyOTYgMTI0IDI4Ljg2OTEgMTE5LjY2NiAyNS41MDUzIDExMi44MjRMOC4wMDggNzcuMjM2NkMzLjkwMzk1IDY4Ljg4OTQgMy45MDM5NSA1OS4xMTA2IDguMDA4MDEgNTAuNzYzNEwyNS41MDUzIDE1LjE3NTZaIiBzdHJva2U9IiNGRkYwOTMiIHN0cm9rZS13aWR0aD0iOCIvPgo8L3N2Zz4K)
+    stretch;
+  z-index: 5;
+  border-image-width: 60px 80px;
+  border-style: solid;
+  border-image-slice: 50% 20%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.posts {
+  width: 65%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem;
+  margin: 1rem 0;
+  gap: 4rem;
+  overflow: auto;
+  z-index: 50;
+}
+
+.about {
+  width: 35%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 0 4rem 0;
+  position: relative;
+}
+
+#canvas3d {
+  position: absolute;
+  width: 400px !important;
+  height: 100% !important;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.canvases {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  bottom: 0;
+  z-index: 55;
+}
+
+.canvases * {
+  position: relative;
+  width: 200px !important;
+  height: 30% !important;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.canvases *:hover {
+  transform: scale(1.2);
+}
+
+.user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.post {
+  position: relative;
+  width: 100%;
+  border-bottom: 5px solid var(--darkYT);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  position: relative;
+}
+
+.post-title {
+  padding: 0.5rem 1rem;
+  width: 20rem;
+  border-radius: 0.7rem;
+  background-color: var(--darkYT);
+  color: white;
+}
+
+.post-user {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 12px;
+  box-shadow: none;
+}
+
+.lines {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--lightY);
+  box-shadow: 0 6px 0 var(--lightY);
+}
+
+.posts::-webkit-scrollbar {
+  width: 2rem;
+}
+
+.posts::-webkit-scrollbar-thumb {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMzQ1IiB2aWV3Qm94PSIwIDAgMjAgMzQ1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTkgMTAuNDAzMVYzMzIuODU3QzE5IDMzMy45NTIgMTguNTUxMyAzMzQuOTk5IDE3Ljc1ODYgMzM1Ljc1NEwxMi40MzU2IDM0MC44MjNDMTAuODM0NCAzNDIuMzQ4IDguMjk5ODMgMzQyLjI4NSA2Ljc3Njk1IDM0MC42ODJMMi4xIDMzNS43NTlDMS4zOTM3NyAzMzUuMDE1IDEgMzM0LjAyOSAxIDMzMy4wMDRWMTAuNDAzMUMxIDkuMTg3OTkgMS41NTIzNiA4LjAzODc0IDIuNTAxMjIgNy4yNzk2NUw3LjUwMTIyIDMuMjc5NjVDOC45NjIwOSAyLjExMDk1IDExLjAzNzkgMi4xMTA5NSAxMi40OTg4IDMuMjc5NjVMMTcuNDk4OCA3LjI3OTY1QzE4LjQ0NzYgOC4wMzg3NCAxOSA5LjE4Nzk5IDE5IDEwLjQwMzFaIiBzdHJva2U9IiNGRkYwOTMiIHN0cm9rZS1vcGFjaXR5PSIwLjUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.posts::-webkit-scrollbar-thumb:hover {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMzQ1IiB2aWV3Qm94PSIwIDAgMjAgMzQ1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTkgMTAuNDAzMVYzMzIuODU3QzE5IDMzMy45NTIgMTguNTUxMyAzMzQuOTk5IDE3Ljc1ODYgMzM1Ljc1NEwxMi40MzU2IDM0MC44MjNDMTAuODM0NCAzNDIuMzQ4IDguMjk5ODMgMzQyLjI4NSA2Ljc3Njk1IDM0MC42ODJMMi4xIDMzNS43NTlDMS4zOTM3NyAzMzUuMDE1IDEgMzM0LjAyOSAxIDMzMy4wMDRWMTAuNDAzMUMxIDkuMTg3OTkgMS41NTIzNiA4LjAzODc0IDIuNTAxMjIgNy4yNzk2NUw3LjUwMTIyIDMuMjc5NjVDOC45NjIwOSAyLjExMDk1IDExLjAzNzkgMi4xMTA5NSAxMi40OTg4IDMuMjc5NjVMMTcuNDk4OCA3LjI3OTY1QzE4LjQ0NzYgOC4wMzg3NCAxOSA5LjE4Nzk5IDE5IDEwLjQwMzFaIiBzdHJva2U9IiNGRkYwOTMiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMTMgMTUuNDMxNFYzMjguNzUxQzEzIDMyOS4wMjYgMTIuOTQzMiAzMjkuMjk4IDEyLjgzMyAzMjkuNTUxTDExLjc3MTYgMzMxLjk4M0MxMS4wNTk3IDMzMy42MTQgOC43MzE5NiAzMzMuNTczIDguMDc4MzIgMzMxLjkxN0w3LjEzOTc4IDMyOS41NEM3LjA0NzQyIDMyOS4zMDcgNyAzMjkuMDU3IDcgMzI4LjgwNlYxNS40MzE0QzcgMTUuMTEwNCA3LjA3NzI2IDE0Ljc5NDEgNy4yMjUyNiAxNC41MDkzTDguMjI1MjYgMTIuNTg0N0M4Ljk3MTk5IDExLjE0NzUgMTEuMDI4IDExLjE0NzUgMTEuNzc0NyAxMi41ODQ3TDEyLjc3NDcgMTQuNTA5M0MxMi45MjI3IDE0Ljc5NDEgMTMgMTUuMTEwNCAxMyAxNS40MzE0WiIgc3Ryb2tlPSIjRkZGMDkzIiBzdHJva2Utb3BhY2l0eT0iMC42IiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 1000px) {
+  .terminal {
+    flex-direction: column-reverse;
+    height: 90%;
+  }
+
+  .about {
+    width: 100%;
+    height: 50%;
+  }
+
+  .posts {
+    width: 100%;
+    height: 50%;
+    overflow: visible;
+  }
+
+  .posts::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  .posts::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.post-title-input {
+  height: 80%;
+  width: 103%;
+  min-width: 5rem;
+  border: 10px solid transparent;
+  border-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQ4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDQ0OCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yNS41MDUzIDE1LjE3NTZDMjguODY5MSA4LjMzNDEyIDM1LjgyOTcgNCA0My40NTMzIDRINDAzLjA4OEM0MTAuNDI4IDQgNDE3LjE3OCA4LjAyMDQ3IDQyMC42NzQgMTQuNDc0M0w0MzkuNzYgNDkuNzExNUM0NDQuNTg5IDU4LjYyNTMgNDQ0LjU4OSA2OS4zNzQ3IDQzOS43NiA3OC4yODg1TDQyMC42NzQgMTEzLjUyNkM0MTcuMTc4IDExOS45OCA0MTAuNDI4IDEyNCA0MDMuMDg4IDEyNEg0My40NTMzQzM1LjgyOTYgMTI0IDI4Ljg2OTEgMTE5LjY2NiAyNS41MDUzIDExMi44MjRMOC4wMDggNzcuMjM2NkMzLjkwMzk1IDY4Ljg4OTQgMy45MDM5NSA1OS4xMTA2IDguMDA4MDEgNTAuNzYzNEwyNS41MDUzIDE1LjE3NTZaIiBzdHJva2U9IiNGRkYwOTMiIHN0cm9rZS13aWR0aD0iOCIvPgo8L3N2Zz4K")
+    30 stretch;
+  z-index: 5;
+  background-color: transparent;
+  font-family: "Sora";
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  filter: drop-shadow(0 0 1rem var(--darkY));
+}
+
+.post-title-input:focus {
+  outline: none;
+}
+
+.editable.post-text {
+  background-color: transparent;
+  font-family: "Sora";
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--lightY);
+  filter: drop-shadow(0 0 1rem var(--darkY));
+  border: none;
+  width: 100%;
+  min-width: 100%;
+  resize: none;
+  overflow: hidden;
+  min-height: 2rem;
+}
+
+.editable.post-text:focus {
+  outline: none;
+}
+
+.post-title-p {
+  width: 20rem;
+}
+
+#addPostBtn {
+  background-color: transparent;
+  border: none;
+  filter: drop-shadow(0 0 1rem var(--darkY));
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  max-width: 5rem;
+}
+
+.addPostIcon {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.delete-btn {
+  cursor: pointer;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.delete-icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
